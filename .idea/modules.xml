@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DTO-BOFStore.iml" filepath="$PROJECT_DIR$/.idea/DTO-BOFStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DTO-BOFStore/DTO-BOFStore.iml" filepath="$PROJECT_DIR$/DTO-BOFStore/DTO-BOFStore.iml" />
     </modules>
   </component>
 </project>
