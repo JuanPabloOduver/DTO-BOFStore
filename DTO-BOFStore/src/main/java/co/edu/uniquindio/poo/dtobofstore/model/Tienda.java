@@ -6,6 +6,7 @@ import java.util.LinkedList;
  * Clase Singleton que representa la tienda de videojuegos.
  */
 public class Tienda {
+
     private static Tienda instancia;
     private String nombre;
     private LinkedList<Juego> listaJuegos;
@@ -15,7 +16,7 @@ public class Tienda {
     /**
      * Constructor privado para garantizar que solo haya una instancia.
      */
-    private Tienda(String nombre) {
+    public Tienda(String nombre) {
         this.nombre = nombre;
         this.listaJuegos = new LinkedList<>();
         this.listaUsuarios = new LinkedList<>();
@@ -99,7 +100,7 @@ public class Tienda {
      * Agrega un usuario a la tienda si no existe.
      */
     public boolean agregarUsuario(Usuario usuario) {
-        if (!verificarUsuario(usuario.getIdUsuario())) {
+        if (!verificarUsuario(usuario.getId())) {
             listaUsuarios.add(usuario);
             return true;
         }
@@ -110,7 +111,7 @@ public class Tienda {
      * Elimina un usuario por su ID.
      */
     public boolean eliminarUsuario(String id) {
-        return listaUsuarios.removeIf(usuario -> usuario.getIdUsuario().equals(id));
+        return listaUsuarios.removeIf(usuario -> usuario.getId().equals(id));
     }
 
     /**
@@ -118,8 +119,8 @@ public class Tienda {
      */
     public boolean actualizarUsuario(String id, Usuario actualizado) {
         for (Usuario usuario : listaUsuarios) {
-            if (usuario.getIdUsuario().equals(id)) {
-                usuario.setIdUsuario(actualizado.getIdUsuario());
+            if (usuario.getId().equals(id)) {
+                usuario.setId(actualizado.getId());
                 usuario.setNombre(actualizado.getNombre());
                 usuario.setCorreo(actualizado.getCorreo());
                 return true;
@@ -132,7 +133,7 @@ public class Tienda {
      * Verifica si un usuario ya existe en la tienda.
      */
     public boolean verificarUsuario(String id) {
-        return listaUsuarios.stream().anyMatch(usuario -> usuario.getIdUsuario().equals(id));
+        return listaUsuarios.stream().anyMatch(usuario -> usuario.getId().equals(id));
     }
 
     @Override
