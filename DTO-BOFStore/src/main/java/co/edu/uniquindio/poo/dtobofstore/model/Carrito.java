@@ -82,4 +82,13 @@ public class Carrito {
         }
         listaJuegos.clear();
     }
+
+    @Override
+    public String toString() {
+        return "Carrito{" +
+                "idCarrito='" + idCarrito + '\'' +
+                ", usuario=" + usuario +
+                ", listaJuegos=" + listaJuegos +
+                '}';
+    }
 }

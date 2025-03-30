@@ -18,4 +18,14 @@ public class JuegoDTO {
         this.precio = juego.getPrecio();
         this.genero = juego.getGenero();
     }
+
+    @Override
+    public String toString() {
+        return "JuegoDTO{" +
+                "titulo='" + titulo + '\'' +
+                ", desarrollador='" + desarrollador + '\'' +
+                ", precio=" + precio +
+                ", genero='" + genero + '\'' +
+                '}';
+    }
 }
