@@ -31,8 +31,7 @@ public class LoginViewController {
 
     @FXML
     void onCliente(ActionEvent event) {
-        //app.openLoginUsuario();
-        app.openLoginAdministrador();
+        app.openLoginUsuario();
     }
 
     @FXML
@@ -42,7 +41,7 @@ public class LoginViewController {
 
     @FXML
     void onRegistrarse(ActionEvent event) {
-        app.openLoginAdministrador();
+        app.openRegistrarse();
     }
 
     App app;

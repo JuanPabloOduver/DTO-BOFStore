@@ -16,7 +16,7 @@
             <Font name="Berlin Sans FB" size="23.0" />
          </font>
       </Text>
-      <Text id="lbl_empresa" fx:id="txt_tucarro" fill="#ff9706" layoutX="492.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOF STORE" textAlignment="CENTER" wrappingWidth="274.92919921875">
+      <Text id="lbl_empresa" fill="#ff9706" layoutX="492.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOF STORE" textAlignment="CENTER" wrappingWidth="274.92919921875">
          <font>
             <Font name="Bauhaus 93" size="40.0" />
          </font>
@@ -36,8 +36,8 @@
             <TableColumn id="tbc_idR" fx:id="tbc_id" prefWidth="123.0" style="fx-background-color: black;" text="Id" />
             <TableColumn id="tbc_tiempoR" fx:id="tbc_titulo" prefWidth="164.0" text="Titulo" />
             <TableColumn id="tbc_matriculaVehiculoR" fx:id="tbc_desarrollador" prefWidth="180.0" text="Desarrollador" />
-            <TableColumn fx:id="tb_genero" prefWidth="155.0" text="Genero" />
-            <TableColumn fx:id="tb_precio" prefWidth="122.0" text="Precio" />
+            <TableColumn fx:id="tbc_genero" prefWidth="155.0" text="Genero" />
+            <TableColumn fx:id="tbc_precio" prefWidth="122.0" text="Precio" />
          </columns>
       </TableView>
       <Text id="lbl_reserva" fx:id="txt_reservas" fill="WHITE" layoutX="246.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JUEGOS VENDIDOS" textAlignment="CENTER" wrappingWidth="299.86474609375">

@@ -34,9 +34,6 @@ public class Tienda {
     public void agregarJuego (Juego juego){
         listaJuegos.add(juego);
     }
-    public void agregarUsuario (Usuario usuario){
-        listaUsuarios.add(usuario);
-    }
 
     public void agregarAdministrador (Administrador administrador){
         listaAdministradores.add(administrador);
@@ -77,5 +74,56 @@ public class Tienda {
     public Tienda setListaAdministradores(LinkedList<Administrador> listaAdministradores) {
         this.listaAdministradores = listaAdministradores;
         return this;
+    }
+
+    public LinkedList<Administrador> getListaAdministradores() {
+        return listaAdministradores;
+    }
+
+
+// Usuarios
+    public boolean agregarUsuario(Usuario usuario) {
+        boolean centinela = false;
+        if (!verificarUsuario(usuario.getId())) {
+            listaUsuarios.add(usuario);
+            centinela = true;
+        }
+        return centinela;
+    }
+
+    public boolean eliminarUsuario(String id) {
+        boolean centinela = false;
+        for (Usuario usuario : listaUsuarios) {
+            if (usuario.getId().equals(id)) {
+                listaUsuarios.remove(usuario);
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    public boolean actualizarUsuario(String id, Usuario actualizado) {
+        boolean centinela = false;
+        for (Usuario usuario : listaUsuarios) {
+            if (usuario.getId().equals(id)) {
+                usuario.setId(actualizado.getId());
+                usuario.setNombre(actualizado.getNombre());
+                usuario.setCorreo(actualizado.getCorreo());
+                centinela = true;
+                break;
+            }
+        }
+        return centinela;
+    }
+
+    public boolean verificarUsuario(String id) {
+        boolean centinela = false;
+        for (Usuario usuario : listaUsuarios) {
+            if (usuario.getId().equals(id)) {
+                centinela = true;
+            }
+        }
+        return centinela;
     }
 }

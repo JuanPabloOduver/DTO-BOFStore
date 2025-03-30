@@ -4,6 +4,7 @@ import co.edu.uniquindio.poo.dtobofstore.model.Administrador;
 import co.edu.uniquindio.poo.dtobofstore.model.Juego;
 import co.edu.uniquindio.poo.dtobofstore.model.Tienda;
 import co.edu.uniquindio.poo.dtobofstore.model.Usuario;
+import co.edu.uniquindio.poo.dtobofstore.viewController.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -14,11 +15,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-import co.edu.uniquindio.poo.dtobofstore.viewController.LoginViewController;
-import co.edu.uniquindio.poo.dtobofstore.viewController.LoginAdministradorViewController;
-import co.edu.uniquindio.poo.dtobofstore.viewController.AdministradorViewController;
-import co.edu.uniquindio.poo.dtobofstore.viewController.CRUD_JuegoViewController;
-import co.edu.uniquindio.poo.dtobofstore.viewController.CRUD_UsuarioViewController;
 
 
 public class App extends Application {
@@ -86,7 +82,7 @@ public class App extends Application {
         }
     }
 
-    /**
+
     public void openLoginUsuario() {
 
         try {
@@ -104,7 +100,121 @@ public class App extends Application {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-    }*/
+    }
+
+    public void openAdministrador() {
+
+        try {
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(App.class.getResource("Administrador.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader2.load();
+            AdministradorViewController administradorViewController = loader2.getController();
+            administradorViewController.setApp(this);
+
+            Scene scene2 = new Scene(rootLayout);
+            primaryStage.setScene(scene2);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openCRUD_Juego() {
+
+        try {
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(App.class.getResource("CRUD_Juego.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader2.load();
+            CRUD_JuegoViewController crudJuegoViewController = loader2.getController();
+            crudJuegoViewController.setApp(this);
+
+            Scene scene2 = new Scene(rootLayout);
+            primaryStage.setScene(scene2);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openCRUD_Usuario() {
+
+        try {
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(App.class.getResource("CRUD_Usuario.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader2.load();
+            CRUD_UsuarioViewController crudUsuarioViewController = loader2.getController();
+            crudUsuarioViewController.setApp(this);
+
+            Scene scene2 = new Scene(rootLayout);
+            primaryStage.setScene(scene2);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openUsuario() {
+
+        try {
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(App.class.getResource("Usuario.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader2.load();
+            UsuarioViewController usuarioViewController = loader2.getController();
+            usuarioViewController.setApp(this);
+
+            Scene scene2 = new Scene(rootLayout);
+            primaryStage.setScene(scene2);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openTienda() {
+
+        try {
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(App.class.getResource("Tienda.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader2.load();
+            TiendaViewController tiendaViewController = loader2.getController();
+            tiendaViewController.setApp(this);
+
+            Scene scene2 = new Scene(rootLayout);
+            primaryStage.setScene(scene2);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void openRegistrarse() {
+
+        try {
+            FXMLLoader loader2 = new FXMLLoader();
+            loader2.setLocation(App.class.getResource("Tienda.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader2.load();
+            RegistrarseViewController registrarseViewController = loader2.getController();
+            registrarseViewController.setApp(this);
+
+            Scene scene2 = new Scene(rootLayout);
+            primaryStage.setScene(scene2);
+            primaryStage.show();
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
 
     public void inicializarData() {
 
