@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="a9122bea-710f-4b89-a0e8-7a48746261ba" name="Changes" comment="viewController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/model/Juego.java" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/model/Juego.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/model/Tienda.java" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/model/Tienda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/viewController/AdministradorViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/viewController/AdministradorViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/LoginUsuarios.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/LoginUsuario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/PanelUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/Usuario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/interfazTienda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/Tienda.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +46,19 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2v0u6sy8pEwFqGjLq1yzLSafZ8v" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.App.executor": "Coverage",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev__camilo",
+    "git-widget-placeholder": "dev__andres",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -59,6 +68,26 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="co.edu.uniquindio.poo.dtobofstore.App" />
+      <module name="DTO-BOFStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="co.edu.uniquindio.poo.dtobofstore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
