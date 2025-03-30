@@ -63,6 +63,7 @@ public class Juego {
         this.genero = genero;
     }
 
+
     /**
      * Método toString.
      */

@@ -103,7 +103,7 @@ public class AdministradorViewController {
     private void initDataBinding() {
         tbc_id.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getIdJuego()));
         tbc_titulo.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTitulo()));
-        tbc_desarrollador.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDesarollador()));
+        tbc_desarrollador.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDesarrollador()));
         tbc_genero.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getGenero()));
         tbc_precio.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getPrecio())));
         // Usamos SimpleObjectProperty para manejar Double y Integer correctamente
