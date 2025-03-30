@@ -8,4 +8,3 @@ public record JuegoRecord(String titulo, String desarrollador, Double precio, St
         this(juego.getTitulo(), juego.getDesarrollador(), juego.getPrecio(), juego.getGenero());
     }
 }
-

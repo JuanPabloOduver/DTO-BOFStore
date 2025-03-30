@@ -55,4 +55,13 @@ public class Tienda {
             usuario.comprarJuego(juego);
         }
     }
+
+    @Override
+    public String toString() {
+        return "Tienda{" +
+                "nombre='" + nombre + '\'' +
+                ", listaJuegos=" + listaJuegos +
+                ", listaUsuarios=" + listaUsuarios +
+                '}';
+    }
 }
