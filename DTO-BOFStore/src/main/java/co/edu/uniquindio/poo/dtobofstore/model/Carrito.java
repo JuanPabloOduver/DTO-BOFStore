@@ -10,18 +10,18 @@ public class Carrito {
     // Id Del Carrito.
     private String idCarrito;
 
-    // Usuario al que pertenece el carrito
+    // Usuario del Carrito.
     private Usuario usuario;
 
-    // Lista de juegos añadidos al carrito antes de realizar la compra
+    // Lista de Juegos.
     private LinkedList<Juego> listaJuegos;
 
     /**
      * Constructor de la clase Carrito.
      *
-     * @param idCarrito  Identificador único del carrito.
-     * @param usuario    Usuario propietario del carrito.
-     * @param listaJuegos Lista inicial de juegos en el carrito (por defecto, será una lista vacía).
+     * @param idCarrito
+     * @param usuario
+     * @param listaJuegos
      */
     public Carrito(String idCarrito, Usuario usuario, LinkedList<Juego> listaJuegos) {
         this.idCarrito = idCarrito;
@@ -29,21 +29,45 @@ public class Carrito {
         this.listaJuegos = new LinkedList<>(); // Se inicializa como una lista vacía
     }
 
+    public String getIdCarrito() {
+        return idCarrito;
+    }
+
+    public void setIdCarrito(String idCarrito) {
+        this.idCarrito = idCarrito;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public LinkedList<Juego> getListaJuegos() {
+        return listaJuegos;
+    }
+
+    public void setListaJuegos(LinkedList<Juego> listaJuegos) {
+        this.listaJuegos = listaJuegos;
+    }
+
     // -------------------- Métodos CRUD del Carrito --------------------
 
     /**
      * Agrega un juego al carrito.
      *
-     * @param juego Juego que se desea añadir.
+     * @param juego
      */
     public void agregarJuego(Juego juego) {
         listaJuegos.add(juego);
     }
 
     /**
-     * Elimina un juego del carrito si está presente en la lista.
+     * Elimina un juego del carrito.
      *
-     * @param juego Juego que se desea eliminar.
+     * @param juego
      */
     public void eliminarJuego(Juego juego) {
         listaJuegos.remove(juego);
@@ -51,13 +75,11 @@ public class Carrito {
 
     /**
      * Realiza la compra de todos los juegos en el carrito.
-     * - Agrega cada juego a la biblioteca del usuario.
-     * - Limpia el carrito después de la compra.
      */
     public void realizarCompra() {
         for (Juego juego : listaJuegos) {
-            usuario.comprarJuego(juego); // Se transfiere el juego a la biblioteca del usuario
+            usuario.comprarJuego(juego);
         }
-        listaJuegos.clear(); // Se vacía el carrito después de la compra
+        listaJuegos.clear();
     }
 }

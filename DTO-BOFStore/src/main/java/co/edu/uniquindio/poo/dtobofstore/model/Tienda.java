@@ -2,38 +2,56 @@ package co.edu.uniquindio.poo.dtobofstore.model;
 
 import java.util.LinkedList;
 
+/**
+ * Clase Singleton que representa la tienda de videojuegos.
+ */
 public class Tienda {
-    private static Tienda instancia;
-    private String nombre;
-    private LinkedList<Juego> listaJuegos;
-    private LinkedList<Usuario> listaUsuarios;
+    private static Tienda instancia;  // Única instancia de la tienda
+    private String nombre;            // Nombre de la tienda
+    private LinkedList<Juego> listaJuegos;   // Lista de juegos disponibles
+    private LinkedList<Usuario> listaUsuarios; // Lista de usuarios registrados
 
-    private Tienda (String nombre){
+    /**
+     * Constructor privado para garantizar que solo haya una instancia.
+     */
+    private Tienda(String nombre) {
         this.nombre = nombre;
         this.listaJuegos = new LinkedList<>();
         this.listaUsuarios = new LinkedList<>();
     }
 
-    public static Tienda getInstancia(String nombre){
-        if (instancia == null){
+    /**
+     * Método para obtener la única instancia de la tienda.
+     */
+    public static Tienda getInstancia(String nombre) {
+        if (instancia == null) {
             instancia = new Tienda(nombre);
         }
         return instancia;
     }
 
-    public LinkedList<Juego> getListaJuegos(){
+    // Getters para obtener las listas de juegos y usuarios
+
+    public LinkedList<Juego> getListaJuegos() {
         return listaJuegos;
     }
 
-    public LinkedList<Usuario> getListaUsuarios(){
+    public LinkedList<Usuario> getListaUsuarios() {
         return listaUsuarios;
     }
 
-    public void agregarJuego (Juego juego){
+    /**
+     * Agrega un juego a la lista de juegos de la tienda.
+     */
+    public void agregarJuego(Juego juego) {
         listaJuegos.add(juego);
     }
-    public void venderJuego(Usuario usuario, Juego juego){
-        if (listaJuegos.contains(juego)){
+
+    /**
+     * Vende un juego a un usuario si está disponible en la tienda.
+     */
+    public void venderJuego(Usuario usuario, Juego juego) {
+        if (listaJuegos.contains(juego)) {
             usuario.comprarJuego(juego);
         }
     }
