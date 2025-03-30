@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="1248.0" style="-fx-background-color: black; -fx-border-color: #ff9706; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.GestionClViewController">
+<AnchorPane fx:id="ap_crud_juego" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="445.0" prefWidth="1248.0" style="-fx-background-color: black; -fx-border-color: #ff9706; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.dtobofstore.viewController.CRUD_JuegoViewController">
    <children>
       <Text id="lbl_empresa" fill="#ffc300" layoutX="426.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOF STORE" textAlignment="CENTER" wrappingWidth="274.92919921875">
          <font>

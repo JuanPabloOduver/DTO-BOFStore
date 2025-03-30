@@ -2,16 +2,12 @@ package co.edu.uniquindio.poo.dtobofstore.model;
 
 import java.util.LinkedList;
 
-public class Usuario {
-    private String idUsuario;
-    private String nombre;
-    private String correo;
+public class Usuario extends Persona{
+
     private LinkedList<Juego> biblioteca;
 
-    public Usuario(String idUsuario, String nombre, String correo, LinkedList<Juego> biblioteca) {
-        this.idUsuario = idUsuario;
-        this.nombre = nombre;
-        this.correo = correo;
+    public Usuario(String id, String nombre, String correo, LinkedList<Juego> biblioteca) {
+        super(id, nombre, correo);
         this.biblioteca = biblioteca;
     }
 
@@ -26,34 +22,10 @@ public class Usuario {
         this.biblioteca = biblioteca;
     }
 
-    public String getIdUsuario() {
-        return idUsuario;
-    }
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
     @Override
     public String toString() {
         return "Usuario{" +
-                "idUsuario='" + idUsuario + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", correo='" + correo + '\'' +
-                ", biblioteca=" + biblioteca +
+                "biblioteca=" + biblioteca +
                 '}';
     }
 }

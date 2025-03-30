@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="1146.0" style="-fx-background-color: black; -fx-border-color: #ff9706; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.GestionClViewController">
+<AnchorPane fx:id="ap_crud_usuario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="1146.0" style="-fx-background-color: black; -fx-border-color: #ff9706; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.GestionClViewController">
    <children>
       <Text id="lbl_empresa" fill="#ffc300" layoutX="426.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOF STORE" textAlignment="CENTER" wrappingWidth="274.92919921875">
          <font>
@@ -26,7 +26,7 @@
             <Font name="Bauhaus 93" size="33.0" />
          </font>
       </Text>
-      <TableView id="tb_listClientes" fx:id="tb_listUsuarios" layoutX="606.0" layoutY="139.0" prefHeight="170.0" prefWidth="461.0">
+      <TableView id="tb_listClientes" fx:id="tb_listUsuarios" layoutX="606.0" layoutY="139.0" prefHeight="170.0" prefWidth="461.0" style="-fx-background-color: gray;">
          <columns>
             <TableColumn id="tbc_cedulaCl" fx:id="tbc_cedula" prefWidth="141.0" text="Cedula" />
             <TableColumn id="tbc_nombreCl" fx:id="tbc_nombre" prefWidth="136.0" text="Nombre" />

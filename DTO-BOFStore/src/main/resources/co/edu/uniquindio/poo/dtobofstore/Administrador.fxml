@@ -9,7 +9,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="ap_empresa" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1105.0" style="-fx-background-color: black; -fx-border-color: ff9706; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.viewController.EmpresaViewController">
+<AnchorPane fx:id="ap_administrador" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1105.0" style="-fx-background-color: black; -fx-border-color: ff9706; -fx-border-width: 4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.dtobofstore.viewController.AdministradorViewController">
    <children>
       <Text id="lbl_nombreAd" fx:id="txt_nombreAdministrador" layoutX="194.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre administrador" textAlignment="CENTER" wrappingWidth="237.86474609375">
          <font>
