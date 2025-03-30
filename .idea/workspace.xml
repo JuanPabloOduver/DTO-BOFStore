@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9122bea-710f-4b89-a0e8-7a48746261ba" name="Changes" comment="interfaz grafica, loginusuarios, panel usuarios intergaz de tienda">
-      <change afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/viewController/InterfazTiendaViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/viewController/LoginUsuariosViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/viewController/PanelUsuarioViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a9122bea-710f-4b89-a0e8-7a48746261ba" name="Changes" comment="viewController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/PanelUsuario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/PanelUsuario.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/interfazTienda.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/resources/co/edu/uniquindio/poo/dtobofstore/interfazTienda.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/App.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -105,7 +101,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743303544880</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="viewController">
+      <option name="closed" value="true" />
+      <created>1743307634179</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743307634180</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +119,7 @@
     <MESSAGE value="Merge" />
     <MESSAGE value="Comentarios varios" />
     <MESSAGE value="interfaz grafica, loginusuarios, panel usuarios intergaz de tienda" />
-    <option name="LAST_COMMIT_MESSAGE" value="interfaz grafica, loginusuarios, panel usuarios intergaz de tienda" />
+    <MESSAGE value="viewController" />
+    <option name="LAST_COMMIT_MESSAGE" value="viewController" />
   </component>
 </project>
