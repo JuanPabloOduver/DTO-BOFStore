@@ -14,4 +14,12 @@ public class UsuarioDTO {
         this.nombre = usuario.getNombre();
         this.correo = usuario.getCorreo();
     }
+
+    @Override
+    public String toString() {
+        return "UsuarioDTO{" +
+                "nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                '}';
+    }
 }
