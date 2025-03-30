@@ -2,6 +2,9 @@ package co.edu.uniquindio.poo.dtobofstore.model;
 
 import java.util.LinkedList;
 
+/**
+ * Clase Singleton que representa la tienda de videojuegos.
+ */
 public class Tienda {
     private static Tienda instancia;
     private String nombre;
@@ -9,39 +12,24 @@ public class Tienda {
     private LinkedList<Usuario> listaUsuarios;
     private LinkedList<Administrador> listaAdministradores;
 
-    public Tienda (String nombre){
+    /**
+     * Constructor privado para garantizar que solo haya una instancia.
+     */
+    private Tienda(String nombre) {
         this.nombre = nombre;
         this.listaJuegos = new LinkedList<>();
         this.listaUsuarios = new LinkedList<>();
         this.listaAdministradores = new LinkedList<>();
     }
 
-    public static Tienda getInstancia(String nombre){
-        if (instancia == null){
+    /**
+     * Método para obtener la única instancia de la tienda.
+     */
+    public static Tienda getInstancia(String nombre) {
+        if (instancia == null) {
             instancia = new Tienda(nombre);
         }
         return instancia;
-    }
-
-    public LinkedList<Juego> getListaJuegos(){
-        return listaJuegos;
-    }
-
-    public LinkedList<Usuario> getListaUsuarios(){
-        return listaUsuarios;
-    }
-
-    public void agregarJuego (Juego juego){
-        listaJuegos.add(juego);
-    }
-
-    public void agregarAdministrador (Administrador administrador){
-        listaAdministradores.add(administrador);
-    }
-    public void venderJuego(Usuario usuario, Juego juego){
-        if (listaJuegos.contains(juego)){
-            usuario.comprarJuego(juego);
-        }
     }
 
     public static Tienda getInstancia() {
@@ -56,74 +44,104 @@ public class Tienda {
         return nombre;
     }
 
-    public Tienda setNombre(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
-        return this;
     }
 
-    public Tienda setListaJuegos(LinkedList<Juego> listaJuegos) {
+    public LinkedList<Juego> getListaJuegos() {
+        return listaJuegos;
+    }
+
+    public void setListaJuegos(LinkedList<Juego> listaJuegos) {
         this.listaJuegos = listaJuegos;
-        return this;
     }
 
-    public Tienda setListaUsuarios(LinkedList<Usuario> listaUsuarios) {
+    public LinkedList<Usuario> getListaUsuarios() {
+        return listaUsuarios;
+    }
+
+    public void setListaUsuarios(LinkedList<Usuario> listaUsuarios) {
         this.listaUsuarios = listaUsuarios;
-        return this;
-    }
-
-    public Tienda setListaAdministradores(LinkedList<Administrador> listaAdministradores) {
-        this.listaAdministradores = listaAdministradores;
-        return this;
     }
 
     public LinkedList<Administrador> getListaAdministradores() {
         return listaAdministradores;
     }
 
+    public void setListaAdministradores(LinkedList<Administrador> listaAdministradores) {
+        this.listaAdministradores = listaAdministradores;
+    }
 
-// Usuarios
+    /**
+     * Agrega un juego a la lista de juegos de la tienda.
+     */
+    public void agregarJuego(Juego juego) {
+        listaJuegos.add(juego);
+    }
+
+    /**
+     * Agrega un administrador a la lista.
+     */
+    public void agregarAdministrador(Administrador administrador) {
+        listaAdministradores.add(administrador);
+    }
+
+    /**
+     * Vende un juego a un usuario si está disponible en la tienda.
+     */
+    public void venderJuego(Usuario usuario, Juego juego) {
+        if (listaJuegos.contains(juego)) {
+            usuario.comprarJuego(juego);
+        }
+    }
+
+    /**
+     * Agrega un usuario a la tienda si no existe.
+     */
     public boolean agregarUsuario(Usuario usuario) {
-        boolean centinela = false;
-        if (!verificarUsuario(usuario.getId())) {
+        if (!verificarUsuario(usuario.getIdUsuario())) {
             listaUsuarios.add(usuario);
-            centinela = true;
+            return true;
         }
-        return centinela;
+        return false;
     }
 
+    /**
+     * Elimina un usuario por su ID.
+     */
     public boolean eliminarUsuario(String id) {
-        boolean centinela = false;
-        for (Usuario usuario : listaUsuarios) {
-            if (usuario.getId().equals(id)) {
-                listaUsuarios.remove(usuario);
-                centinela = true;
-                break;
-            }
-        }
-        return centinela;
+        return listaUsuarios.removeIf(usuario -> usuario.getIdUsuario().equals(id));
     }
 
+    /**
+     * Actualiza los datos de un usuario.
+     */
     public boolean actualizarUsuario(String id, Usuario actualizado) {
-        boolean centinela = false;
         for (Usuario usuario : listaUsuarios) {
-            if (usuario.getId().equals(id)) {
-                usuario.setId(actualizado.getId());
+            if (usuario.getIdUsuario().equals(id)) {
+                usuario.setIdUsuario(actualizado.getIdUsuario());
                 usuario.setNombre(actualizado.getNombre());
                 usuario.setCorreo(actualizado.getCorreo());
-                centinela = true;
-                break;
+                return true;
             }
         }
-        return centinela;
+        return false;
     }
 
+    /**
+     * Verifica si un usuario ya existe en la tienda.
+     */
     public boolean verificarUsuario(String id) {
-        boolean centinela = false;
-        for (Usuario usuario : listaUsuarios) {
-            if (usuario.getId().equals(id)) {
-                centinela = true;
-            }
-        }
-        return centinela;
+        return listaUsuarios.stream().anyMatch(usuario -> usuario.getIdUsuario().equals(id));
+    }
+
+    @Override
+    public String toString() {
+        return "Tienda{" +
+                "nombre='" + nombre + '\'' +
+                ", listaJuegos=" + listaJuegos +
+                ", listaUsuarios=" + listaUsuarios +
+                ", listaAdministradores=" + listaAdministradores +
+                '}';
     }
 }
