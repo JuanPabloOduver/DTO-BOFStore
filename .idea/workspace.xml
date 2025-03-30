@@ -4,11 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39330b83-b7fd-4354-82d8-10874371ca96" name="Changes" comment="Agrego .github y codeowners" />
+    <list default="true" id="a9122bea-710f-4b89-a0e8-7a48746261ba" name="Changes" comment="Merge">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/model/Carrito.java" beforeDir="false" afterPath="$PROJECT_DIR$/DTO-BOFStore/src/main/java/co/edu/uniquindio/poo/dtobofstore/model/Carrito.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,10 +36,9 @@
   }
 }]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
+  "associatedIndex": 2
 }]]></component>
-  <component name="ProjectId" id="2uxCytD327IWlE2COlcTtsU48ke" />
+  <component name="ProjectId" id="2v0u6sy8pEwFqGjLq1yzLSafZ8v" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,18 +46,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "dev__pablo",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ASUS/OneDrive/Escritorio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -63,20 +69,20 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39330b83-b7fd-4354-82d8-10874371ca96" name="Changes" comment="" />
-      <created>1743181096937</created>
+      <changelist id="a9122bea-710f-4b89-a0e8-7a48746261ba" name="Changes" comment="" />
+      <created>1743294143795</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1743181096937</updated>
-      <workItem from="1743181098411" duration="792000" />
+      <updated>1743294143795</updated>
+      <workItem from="1743294147980" duration="1237000" />
     </task>
-    <task id="LOCAL-00001" summary="Agrego .github y codeowners">
+    <task id="LOCAL-00001" summary="Merge">
       <option name="closed" value="true" />
-      <created>1743181610482</created>
+      <created>1743294251428</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1743181610482</updated>
+      <updated>1743294251428</updated>
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
@@ -85,11 +91,7 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Agrego .github y codeowners" />
-    <option name="LAST_COMMIT_MESSAGE" value="Agrego .github y codeowners" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="Merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge" />
   </component>
 </project>
