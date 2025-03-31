@@ -15,12 +15,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import co.edu.uniquindio.poo.dtobofstore.controller.*;
 
 
 public class App extends Application {
     private Stage primaryStage;
     @SuppressWarnings("exports")
     public static Tienda tienda = new Tienda("Bof Store");
+    public static Usuario usuario = null;
 
     private Stack<Scene> sceneHistory = new Stack<>();
 
@@ -35,6 +37,8 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
+
+
 
     public void openLogin() {
         inicializarData();
@@ -55,11 +59,25 @@ public class App extends Application {
         }
     }
 
+    public void setPrimaryStage(Stage primaryStage) {
+        this.primaryStage = primaryStage;
+    }
+
+    public void cambiarEscena(Scene nuevaEscena) {
+        if (primaryStage.getScene() != null) {
+            sceneHistory.push(primaryStage.getScene()); // Guarda la escena actual en la pila
+        }
+        primaryStage.setScene(nuevaEscena); // Cambia a la nueva escena
+        primaryStage.show(); // Muestra la nueva escena
+    }
+
     public void volver() {
         if (!sceneHistory.isEmpty()) {
-            Scene previousScene = sceneHistory.pop();
-            primaryStage.setScene(previousScene);
-            primaryStage.show();
+            Scene previousScene = sceneHistory.pop(); // Recupera la última escena de la pila
+            primaryStage.setScene(previousScene); // Cambia a la escena previa
+            primaryStage.show(); // Muestra la escena anterior
+        } else {
+            System.out.println("No hay escenas previas en el historial."); // Mensaje cuando la pila está vacía
         }
     }
 
@@ -72,12 +90,15 @@ public class App extends Application {
             LoginAdministradorViewController loginAdministradorViewController = loader2.getController();
             loginAdministradorViewController.setApp(this);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
-            primaryStage.show();
+            Scene newScene = new Scene(rootLayout);
 
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
+            primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -90,14 +111,17 @@ public class App extends Application {
             loader2.setLocation(App.class.getResource("LoginUsuario.fxml"));
             AnchorPane rootLayout = (AnchorPane) loader2.load();
             LoginUsuarioViewController loginUsuarioViewController = loader2.getController();
-            loginUsuarioViewController.setApp(this);
+            loginUsuarioViewController.setApp(this, tienda);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
+            Scene newScene = new Scene(rootLayout);
+
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
             primaryStage.show();
-
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -111,18 +135,20 @@ public class App extends Application {
             AdministradorViewController administradorViewController = loader2.getController();
             administradorViewController.setApp(this);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
-            primaryStage.show();
+            Scene newScene = new Scene(rootLayout);
 
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
+            primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
     public void openCRUD_Juego() {
-
         try {
             FXMLLoader loader2 = new FXMLLoader();
             loader2.setLocation(App.class.getResource("CRUD_Juego.fxml"));
@@ -130,18 +156,20 @@ public class App extends Application {
             CRUD_JuegoViewController crudJuegoViewController = loader2.getController();
             crudJuegoViewController.setApp(this);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
-            primaryStage.show();
+            Scene newScene = new Scene(rootLayout);
 
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
+            primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
     public void openCRUD_Usuario() {
-
         try {
             FXMLLoader loader2 = new FXMLLoader();
             loader2.setLocation(App.class.getResource("CRUD_Usuario.fxml"));
@@ -149,69 +177,62 @@ public class App extends Application {
             CRUD_UsuarioViewController crudUsuarioViewController = loader2.getController();
             crudUsuarioViewController.setApp(this);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
-            primaryStage.show();
+            Scene newScene = new Scene(rootLayout);
 
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
+            primaryStage.show();
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
     public void openUsuario() {
-
         try {
             FXMLLoader loader2 = new FXMLLoader();
             loader2.setLocation(App.class.getResource("Usuario.fxml"));
             AnchorPane rootLayout = (AnchorPane) loader2.load();
+
             UsuarioViewController usuarioViewController = loader2.getController();
-            usuarioViewController.setApp(this);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
+            UsuarioController usuarioController = new UsuarioController(usuario, tienda);
+
+            usuarioViewController.setApp(this, usuarioController);
+
+            Scene newScene = new Scene(rootLayout);
+
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
             primaryStage.show();
-
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
 
     public void openTienda() {
-
         try {
             FXMLLoader loader2 = new FXMLLoader();
             loader2.setLocation(App.class.getResource("Tienda.fxml"));
             AnchorPane rootLayout = (AnchorPane) loader2.load();
+
             TiendaViewController tiendaViewController = loader2.getController();
-            tiendaViewController.setApp(this);
+            tiendaViewController.setApp(this, tienda);
 
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
+            Scene newScene = new Scene(rootLayout);
+
+            if (primaryStage.getScene() != null) {
+                sceneHistory.push(primaryStage.getScene());
+            }
+
+            primaryStage.setScene(newScene);
             primaryStage.show();
-
         } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-    }
-
-    public void openRegistrarse() {
-
-        try {
-            FXMLLoader loader2 = new FXMLLoader();
-            loader2.setLocation(App.class.getResource("Tienda.fxml"));
-            AnchorPane rootLayout = (AnchorPane) loader2.load();
-            RegistrarseViewController registrarseViewController = loader2.getController();
-            registrarseViewController.setApp(this);
-
-            Scene scene2 = new Scene(rootLayout);
-            primaryStage.setScene(scene2);
-            primaryStage.show();
-
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -226,7 +247,7 @@ public class App extends Application {
         Juego juego2 = new Juego("134","Roblox","Sprekk",50.0,"Plataformas");
         tienda.agregarJuego(juego2);
 
-        Usuario usuario1 = new Usuario("1095","Raul","@Raul",null);
+                Usuario usuario1 = new Usuario("1095","Raul","@Raul",null);
         tienda.agregarUsuario(usuario1);
         Usuario usuario2= new Usuario("1043","Fernequi","@Nequi",null);
         tienda.agregarUsuario(usuario2);
@@ -234,6 +255,4 @@ public class App extends Application {
         Administrador administrador1 = new Administrador("321","Andres","Sprekk");
         tienda.agregarAdministrador(administrador1);
     }
-
-
 }

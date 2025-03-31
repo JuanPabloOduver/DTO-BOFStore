@@ -43,11 +43,6 @@
             <Font name="Arial Black" size="17.0" />
          </font>
       </Button>
-      <Button id="btn_administrador" fx:id="btn_registrarse" layoutX="64.0" layoutY="272.0" mnemonicParsing="false" onAction="#onRegistrarse" prefHeight="42.0" prefWidth="161.0" style="-fx-background-color: black;" text="Registrarse" textFill="#28adaa">
-         <font>
-            <Font name="Arial Black" size="17.0" />
-         </font>
-      </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="312.0" layoutX="18.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="6.0" />
       <Text fx:id="lbl_bienvenido1" fill="WHITE" layoutX="34.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BOF STORE" textAlignment="CENTER" wrappingWidth="216.92919921875">
          <font>

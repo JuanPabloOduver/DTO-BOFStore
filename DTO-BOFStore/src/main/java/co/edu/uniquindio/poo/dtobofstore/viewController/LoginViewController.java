@@ -39,11 +39,6 @@ public class LoginViewController {
         app.openLoginAdministrador();
     }
 
-    @FXML
-    void onRegistrarse(ActionEvent event) {
-        app.openRegistrarse();
-    }
-
     App app;
 
     public void setApp(App app) {

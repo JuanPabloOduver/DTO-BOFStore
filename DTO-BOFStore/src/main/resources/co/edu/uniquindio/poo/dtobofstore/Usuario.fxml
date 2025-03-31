@@ -12,7 +12,7 @@
 <AnchorPane fx:id="ap_usuario" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="780.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.dtobofstore.viewController.UsuarioViewController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="375.0" layoutX="21.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="6.0" />
-      <Text fx:id="lbl_Tienda" fill="#00ff0b" layoutX="282.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panel Usuario" textAlignment="CENTER" wrappingWidth="216.92919921875">
+      <Text fx:id="lbl_panelUsuario" fill="#00ff0b" layoutX="282.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Panel Usuario" textAlignment="CENTER" wrappingWidth="216.92919921875">
          <font>
             <Font name="Bauhaus 93" size="33.0" />
          </font>
@@ -28,11 +28,11 @@
          </font>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="375.0" layoutX="754.0" layoutY="16.0" stroke="BLACK" strokeType="INSIDE" width="6.0" />
-      <TableView layoutX="52.0" layoutY="93.0" prefHeight="253.0" prefWidth="667.0">
-         <columns>
+      <TableView fx:id="tbl_panel_usuario" layoutX="52.0" layoutY="93.0" prefHeight="253.0" prefWidth="667.0">
+      <columns>
             <TableColumn fx:id="tb_IdJuego" prefWidth="114.0" text="IdJuego" />
             <TableColumn fx:id="tb_Titulo" minWidth="3.0" prefWidth="151.0" text="Titulo" />
-            <TableColumn fx:id="tb_Desarrolladora" prefWidth="135.0" text="Desarrolladora" />
+            <TableColumn fx:id="tb_Desarrollador" prefWidth="135.0" text="Desarrollador" />
             <TableColumn fx:id="tb_Precio" prefWidth="133.0" text="Precio" />
             <TableColumn fx:id="tb_Genero" prefWidth="133.0" text="Genero" />
          </columns>

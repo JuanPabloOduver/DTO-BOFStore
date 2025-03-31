@@ -139,7 +139,7 @@ public class CRUD_UsuarioViewController {
     }
 
     private Usuario buildUsuario() {
-        Usuario usuario = new Usuario(txf_nombre.getText(), txf_cedula.getId(), txf_correo.getText(),null);
+        Usuario usuario = new Usuario(txf_cedula.getText(), txf_nombre.getText(), txf_correo.getText(),null);
         return usuario;
     }
 
@@ -151,7 +151,6 @@ public class CRUD_UsuarioViewController {
             limpiarSeleccion();
         }
     }
-
 
     private void actualizarUsuario() {
         if (selectedUsuario != null && crudUsuarioController.actualizarUsuario(selectedUsuario.getId(), buildUsuario())) {
@@ -176,4 +175,3 @@ public class CRUD_UsuarioViewController {
         txf_correo.clear();
     }
 }
-

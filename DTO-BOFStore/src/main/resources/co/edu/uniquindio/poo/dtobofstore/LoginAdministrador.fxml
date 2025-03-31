@@ -22,8 +22,8 @@
          </font>
       </Text>
       <TextField id="lbl_nombreAd" fx:id="txf_nombreAd" layoutX="86.0" layoutY="155.0" prefHeight="38.0" prefWidth="409.0" />
-      <TextField id="lbl_contraseñaAd" fx:id="txf_contraseña" layoutX="86.0" layoutY="243.0" prefHeight="38.0" prefWidth="409.0" />
-      <Text id="txt_contraseña" fill="#28adaa" layoutX="59.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" textAlignment="CENTER" wrappingWidth="160.86474609375">
+      <TextField id="lbl_contraseniaAd" fx:id="txf_contrasenia" layoutX="86.0" layoutY="243.0" prefHeight="38.0" prefWidth="409.0" />
+      <Text id="txt_contrasenia" fill="#28adaa" layoutX="59.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contraseña" textAlignment="CENTER" wrappingWidth="160.86474609375">
          <font>
             <Font name="Berlin Sans FB" size="23.0" />
          </font>
