@@ -8,6 +8,7 @@ public class AdministradorController {
     private static AdministradorController instance;
     Tienda tienda;
 
+    //Clase Controller de Administrador
     public AdministradorController(Tienda tienda) {
         this.tienda = tienda;
     }
@@ -16,6 +17,7 @@ public class AdministradorController {
         return tienda.getListaJuegos();
     }
 
+    //Metodo para generar una instancia del controller
     public static AdministradorController getInstance() {
         if (instance == null) {
             // instance = new AdministradorController();

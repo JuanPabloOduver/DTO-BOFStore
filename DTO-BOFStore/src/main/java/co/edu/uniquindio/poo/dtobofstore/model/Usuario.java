@@ -43,4 +43,12 @@ public class Usuario extends Persona {
                 ", biblioteca=" + biblioteca +
                 '}';
     }
+    public void agregarJuegoABiblioteca(Juego juego) {
+        if (!biblioteca.contains(juego)) { // Evita duplicados
+            biblioteca.add(juego);
+
+        } else {
+            System.out.println("El juego ya está en la biblioteca.");
+        }
+    }
 }

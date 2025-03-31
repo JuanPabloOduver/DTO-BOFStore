@@ -4,6 +4,7 @@ import java.util.Collection;
 import co.edu.uniquindio.poo.dtobofstore.model.Usuario;
 import co.edu.uniquindio.poo.dtobofstore.model.Tienda;
 
+// Clase Controller del crud del usuario.
 public class CRUD_UsuarioController {
     private static CRUD_UsuarioController instance;
     Tienda tienda;
@@ -28,6 +29,7 @@ public class CRUD_UsuarioController {
         return tienda.actualizarUsuario(id, usuario);
     }
 
+    // Metodo para generar una instancia de usuario controller.
     public static CRUD_UsuarioController getInstance() {
         if (instance == null) {
             // instance = new UsuarioController();

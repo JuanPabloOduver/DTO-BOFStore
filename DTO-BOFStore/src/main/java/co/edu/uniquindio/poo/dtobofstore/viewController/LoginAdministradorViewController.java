@@ -29,7 +29,7 @@ public class LoginAdministradorViewController {
     private Button btn_ingresar;
 
     @FXML
-    private TextField txf_contraseña;
+    private TextField txf_contrasenia;
 
     @FXML
     private Text txt_administrador;
@@ -56,7 +56,7 @@ public class LoginAdministradorViewController {
 
     public void verificarAdministrador() {
         String nombreIngresado = txf_nombreAd.getText().trim();
-        String cedulaIngresada = txf_contraseña.getText().trim();
+        String cedulaIngresada = txf_contrasenia.getText().trim();
         if (cedulaIngresada.isEmpty() || nombreIngresado.isEmpty()) {
             mostrarAlerta("Los datos no pueden estar vacíos.");
             return;
@@ -87,7 +87,7 @@ public class LoginAdministradorViewController {
     }
 
     private void limpiarCampos() {
-        txf_contraseña.clear();
+        txf_contrasenia.clear();
         txf_nombreAd.clear();
     }
 

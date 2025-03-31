@@ -13,10 +13,10 @@ public class Juego {
     /**
      * Constructor para inicializar un juego.
      */
-    public Juego(String idJuego, String titulo, String desarollador, Double precio, String genero) {
+    public Juego(String idJuego, String titulo, String desarrollador, Double precio, String genero) {
         this.idJuego = idJuego;
         this.titulo = titulo;
-        this.desarrollador = desarollador;
+        this.desarrollador = desarrollador;
         this.precio = precio;
         this.genero = genero;
     }
@@ -43,8 +43,8 @@ public class Juego {
         return desarrollador;
     }
 
-    public void setDesarrollador(String desarollador) {
-        this.desarrollador = desarollador;
+    public void setDesarrollador(String desarrollador) {
+        this.desarrollador = desarrollador;
     }
 
     public Double getPrecio() {
@@ -72,7 +72,7 @@ public class Juego {
         return "Juego{" +
                 "idJuego='" + idJuego + '\'' +
                 ", titulo='" + titulo + '\'' +
-                ", desarollador='" + desarrollador + '\'' +
+                ", desarrollador='" + desarrollador + '\'' +
                 ", precio=" + precio +
                 ", genero='" + genero + '\'' +
                 '}';

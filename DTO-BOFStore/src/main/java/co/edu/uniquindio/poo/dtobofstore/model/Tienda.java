@@ -74,13 +74,6 @@ public class Tienda {
     }
 
     /**
-     * Agrega un juego a la lista de juegos de la tienda.
-     */
-    public void agregarJuego(Juego juego) {
-        listaJuegos.add(juego);
-    }
-
-    /**
      * Agrega un administrador a la lista.
      */
     public void agregarAdministrador(Administrador administrador) {
@@ -135,6 +128,48 @@ public class Tienda {
     public boolean verificarUsuario(String id) {
         return listaUsuarios.stream().anyMatch(usuario -> usuario.getId().equals(id));
     }
+
+    /**
+     * Agrega un juego a la tienda si no existe.
+     */
+    public boolean agregarJuego(Juego juego) {
+        if (!verificarJuego(juego.getIdJuego())) {
+            listaJuegos.add(juego);
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * Elimina un juego por su ID.
+     */
+    public boolean eliminarJuego(String idJuego) {
+        return listaJuegos.removeIf(juego -> juego.getIdJuego().equals(idJuego));
+    }
+
+    /**
+     * Actualiza los datos de un juego.
+     */
+    public boolean actualizarJuego(String idJuego, Juego actualizado) {
+        for (Juego juego : listaJuegos) {
+            if (juego.getIdJuego().equals(idJuego)) {
+                juego.setIdJuego(actualizado.getIdJuego());
+                juego.setTitulo(actualizado.getTitulo());
+                juego.setDesarrollador(actualizado.getDesarrollador());
+                juego.setPrecio(actualizado.getPrecio());
+                juego.setGenero(actualizado.getGenero());
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * Verifica si un juego ya existe en la tienda.
+     */
+    public boolean verificarJuego(String idJuego) {
+        return listaJuegos.stream().anyMatch(juego -> juego.getIdJuego().equals(idJuego));
+    }
+
 
     @Override
     public String toString() {

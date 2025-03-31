@@ -17,25 +17,25 @@
             <Region />
          </root>
       </SubScene>
-      <Text fx:id="lbl_bienvenido" fill="#00ff0b" layoutX="36.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario " textAlignment="CENTER" wrappingWidth="216.92919921875">
+      <Text fx:id="lbl_Usuario" fill="#00ff0b" layoutX="36.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario " textAlignment="CENTER" wrappingWidth="216.92919921875">
          <font>
             <Font name="Bauhaus 93" size="33.0" />
          </font>
       </Text>
-      <Text fx:id="lbl_iniciarComo" fill="WHITE" layoutX="64.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ingrese sus datos" textAlignment="CENTER" wrappingWidth="160.86474609375">
+      <Text fx:id="lbl_ingrese_sus_datos" fill="WHITE" layoutX="64.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ingrese sus datos" textAlignment="CENTER" wrappingWidth="160.86474609375">
          <font>
             <Font name="Berlin Sans FB" size="23.0" />
          </font>
       </Text>
-      <Button id="btn_administrador" fx:id="btn_registrarse" layoutX="24.0" layoutY="280.0" mnemonicParsing="false" onAction="#onRegistrarse" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: black;" text="Regresar" textFill="#359ed7">
+      <Button id="btn_administrador" fx:id="btn_regresar" layoutX="24.0" layoutY="280.0" mnemonicParsing="false" onAction="#onRegresar" prefHeight="17.0" prefWidth="119.0" style="-fx-background-color: black;" text="Regresar" textFill="#359ed7">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>
       </Button>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="312.0" layoutX="18.0" layoutY="17.0" stroke="BLACK" strokeType="INSIDE" width="6.0" />
-      <TextField fx:id="txt_Contraseña" layoutX="63.0" layoutY="189.0" onAction="#onContraseña" promptText="Contraseña" />
-      <TextField fx:id="txt_nombre" layoutX="63.0" layoutY="136.0" onAction="#onNombre" promptText="Nombre" />
-      <Button id="btn_administrador" fx:id="btn_registrarse1" layoutX="144.0" layoutY="280.0" mnemonicParsing="false" onAction="#onRegistrarse" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: black;" text="Ingresar" textAlignment="RIGHT" textFill="#359ed7">
+      <TextField fx:id="txt_Contrasenia" layoutX="63.0" layoutY="189.0" promptText="Contrasenia" />
+      <TextField fx:id="txt_nombre" layoutX="63.0" layoutY="136.0" prefHeight="27.0" prefWidth="178.0" promptText="Nombre" />
+      <Button id="btn_administrador" fx:id="btn_ingresar" layoutX="144.0" layoutY="280.0" mnemonicParsing="false" onAction="#onIngresar" prefHeight="38.0" prefWidth="119.0" style="-fx-background-color: black;" text="Ingresar" textAlignment="RIGHT" textFill="#359ed7">
          <font>
             <Font name="Arial Black" size="17.0" />
          </font>
